@@ -5,9 +5,9 @@ abstract class ProductEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class Products extends ProductEvent {
+class GetProducts extends ProductEvent {
 
-  Products();
+  GetProducts();
 
   @override
   String toString() => " {  }";

@@ -34,12 +34,15 @@ dependencies:
   another_flushbar: ^1.10.22
   http: ^0.13.3
   path_provider: ^2.0.1
-  sqflite: ^2.0.0+3
-  
+  moor_flutter: ^4.0.0
+  provider: ^5.0.0
+  flutter_rating_bar: ^4.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  moor_generator: ^4.3.1
+  build_runner: ^2.0.4
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

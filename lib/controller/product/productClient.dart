@@ -13,13 +13,13 @@ class ProductClient {
           await http.get(url, headers: {"Content-Type": "application/json"});
       if (response.statusCode == 200) {
         var jsonResponse = convert.jsonDecode(response.body);
-        List<Product>? productss = [];
+        
+        List<ProductFromAPI>? productss = [];
         ProductModel data = ProductModel.fromJson(jsonResponse);
-        for (var i = 0; i <= 50; i++) {
+        for (var i = 0; i <= 100; i++) {
           productss.add(data.products![i]);
         }
-        ProductModel list =
-            ProductModel(products: productss, productCount: 50);
+        ProductModel list = ProductModel(products: productss, productCount: 100);
         return list;
       }
     } catch (e) {

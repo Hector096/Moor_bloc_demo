@@ -12,7 +12,7 @@ class ProductModel {
   });
 
   int? productCount;
-  List<Product>? products;
+  List<ProductFromAPI>? products;
   String? error;
 
   factory ProductModel.fromJson(Map<String, dynamic> json) => ProductModel(
@@ -20,8 +20,8 @@ class ProductModel {
             json["ProductCount"] == null ? null : json["ProductCount"],
         products: json["Products"] == null
             ? null
-            : List<Product>.from(
-                json["Products"].map((x) => Product.fromJson(x))),
+            : List<ProductFromAPI>.from(
+                json["Products"].map((x) => ProductFromAPI.fromJson(x))),
       );
 
   Map<String, dynamic> toJson() => {
@@ -33,8 +33,8 @@ class ProductModel {
       ProductModel.withError(String errorValue) : error = errorValue;
 }
 
-class Product {
-  Product({
+class ProductFromAPI {
+  ProductFromAPI({
     this.season,
     this.brand,
     this.mood,
@@ -118,7 +118,7 @@ class Product {
   num? likeabilty;
   String? brandRank;
 
-  factory Product.fromJson(Map<String, dynamic> json) => Product(
+  factory ProductFromAPI.fromJson(Map<String, dynamic> json) => ProductFromAPI(
         season: json["Season"] == null ? null : json["Season"],
         brand: json["Brand"] == null ? null : json["Brand"],
         mood: json["Mood"] == null ? null : json["Mood"],

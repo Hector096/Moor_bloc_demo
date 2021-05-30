@@ -1,6 +1,6 @@
 
 import 'package:equatable/equatable.dart';
-import 'package:qartfashion/controller/product/productModel.dart';
+import 'package:qartfashion/controller/product/product_database.dart';
 
 abstract class ProductState extends Equatable {
   const ProductState();

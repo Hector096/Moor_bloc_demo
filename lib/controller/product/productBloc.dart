@@ -11,10 +11,10 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
 
   @override
   Stream<ProductState> mapEventToState(ProductEvent event) async* {
-    if (event is Products) yield* _getProduct(event);
+    if (event is GetProducts) yield* _getProduct(event);
   }
 
-  Stream<ProductState> _getProduct(Products event) async* {
+  Stream<ProductState> _getProduct(GetProducts event) async* {
     yield LoadingState();
     try {
       yield Success(await repository.getProducts());
